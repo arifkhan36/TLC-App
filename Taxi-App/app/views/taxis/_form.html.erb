@@ -1,0 +1,17 @@
+<%= form_for (@taxi) do |f| %>
+<div>
+  <%= f.label :model %>
+  <%= f.text_field :model %>
+</div>
+<div>
+  <%= f.label :year %>
+  <%= f.text_field :year %>
+</div>
+<div>
+  <%= f.label :driver_id %>
+  <%= f.text_field :driver_id %>
+</div>
+<div>
+  <%= f.submit %>
+</div>
+<% end %>

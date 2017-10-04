@@ -1,0 +1,27 @@
+<div class="container">
+
+<h1>
+    <span>Name: <%=@driver.name %></span>
+      <br>
+      <span>Age: <%=@driver.age %></span>
+        <br>
+        <span>Rating: <%=@driver.rating %></span>
+        <br>
+        <span>Driver id: <%=@driver.id %></span>
+        <br>
+        <span>Taxi_id: <%=@driver.taxis.ids %></span>
+        <br>
+    <% @taxis.each do |taxi| %>
+<span>Model: <%= taxi.model %></span>
+<br>
+<span>Year: <%= taxi.year %></span>
+<% end %>
+
+</h1>
+
+<%= link_to "Edit driver!", edit_driver_path %>
+<%= link_to "Delete driver!", driver_path(@driver), method: :delete,
+data: {confirm: 'are you sure'} %>
+<p><%= link_to "Back to home page", drivers_path %></p>
+
+</div>

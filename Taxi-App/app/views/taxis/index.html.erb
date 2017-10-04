@@ -1,0 +1,17 @@
+<div class="container">
+<h1>welcome To TLC</h1>
+<ul>
+  <% @taxis.each do |taxi| %>
+  <li>
+    <h2><%= link_to taxi.model, taxi_path(taxi) %></h2>
+  </li>
+  <% end %>
+
+
+  </ul>
+<br>
+  <p><%= link_to "Create new Taxis", new_taxi_path %></p>
+  <p><%= link_to "Back to Drivers page", drivers_path %></p>
+
+
+</div>

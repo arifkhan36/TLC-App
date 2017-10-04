@@ -1,0 +1,18 @@
+<div class="container">
+
+<h1>
+    <span>Model: <%=@taxi.model %></span>
+      <br>
+      <span>Year: <%=@taxi.year %></span>
+        <br>
+      <span>Driver id: <%=@taxi.driver_id %></span>
+        <br>
+
+</h1>
+<p><%= link_to("Edit Vehicle", edit_taxi_path) %></p>
+<%= link_to "Delete taxi!", taxi_path(@taxi), method: :delete,
+data: {confirm: 'are you sure'} %>
+<p><%= link_to "Back to home page", taxis_path %></p>
+
+</div>
+
